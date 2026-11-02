@@ -2,6 +2,32 @@
 
 Public homepage for [masis.au](https://masis.au). It is a static site on Cloudflare Workers Static Assets, in its own repository. The application stays at `https://lifepilot.mrbakes.au` until a later migration.
 
+## Masis repository family
+
+**You are here:** [lifepilot-website](https://github.com/ryanandrewbaker/lifepilot-website) — public marketing website.
+
+The Masis product spans four repositories:
+
+- [lifepilot](https://github.com/ryanandrewbaker/lifepilot) — backend, web application, PostgreSQL, shared contracts and canonical documentation.
+- [lifepilot-apple](https://github.com/ryanandrewbaker/lifepilot-apple) — native iOS, watchOS and HealthKit.
+- [openGym](https://github.com/ryanandrewbaker/openGym) (`lifepilot-integration` branch) — strength workout execution and Masis integration.
+- [lifepilot-website](https://github.com/ryanandrewbaker/lifepilot-website) — public marketing website.
+
+## Development guardrails
+
+Development work is tracked in the [MASIS Jira project](https://masis-app.atlassian.net/jira/software/projects/MASIS). **Code and configuration changes require an existing Jira issue key.** Read-only investigation and design discussion are permitted without an issue.
+
+The [Definition of Ready](https://masis-app.atlassian.net/wiki/spaces/MASIS/pages/327681/Masis+Definition+of+Ready) and explicit user approval govern when implementation may start (including Jira status transition and read-back). While an issue is **In Progress**, Cursor continues only when Jira history and the approved readiness baseline still apply. **Review and Test** is review-only; further edits require authorised return to **In Progress** for rework.
+
+Assess impact across all four repositories; change only what the issue requires. **Resolved** (Done on the board) requires applicable verification, independent review and evidence on the issue — **Resolved is not Released**. Production, TestFlight and public website deployment need separate authorisation.
+
+This README summarises the guardrails. Authoritative policy and workflow detail:
+
+- [`.cursor/rules/masis-delivery.mdc`](.cursor/rules/masis-delivery.mdc) — always-on Cursor governance
+- [`.cursor/commands/masis-workflow.md`](.cursor/commands/masis-workflow.md) — `/masis-workflow MASIS-123 refine|deliver`
+- [Definition of Ready](https://masis-app.atlassian.net/wiki/spaces/MASIS/pages/327681/Masis+Definition+of+Ready)
+- [Definition of Done](https://masis-app.atlassian.net/wiki/spaces/MASIS/pages/524289/Masis+Definition+of+Done)
+
 ## Local development
 
 ```bash
